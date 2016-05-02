@@ -1,0 +1,337 @@
+/*
+design guide: https://docs.google.com/document/d/1A6-e115VtldKcIkHLVmxd0hjhvI120OufSLmRLTC-LU/edit#
+design megathread: https://www.reddit.com/r/SandersForPresident/comments/34qpvz/official_graphic_design_megathread/
+materials: https://www.reddit.com/r/SandersForPresident/wiki/materials
+CDN: http://nicluo.com/amazon-s3-on-domain-root-without-route-53/
+*/
+
+@font-face {
+  font-family: 'jubilat';
+  src: url(../fonts/jubilat-regular-webfont.ttf);
+}
+
+body {
+  width: 100%;
+  background-color: #A6B6C6;
+  background-image: url("../img/berniecircle.png");
+  background-repeat: repeat;
+}
+
+.heading > .title > .bernie {
+  font-family: 'jubilat';
+  display: inline-block;
+  font-size: 60px;
+  color: #317BBF;
+}
+
+.heading > .title {
+  padding: 5px;
+  padding-bottom: 10px;
+  text-align: center;
+  width: 100%;
+  background-color: #dedede;
+}
+
+.heading > .description {
+  padding: 10px;
+  text-align: center;
+  font-family: 'Architects Daughter';
+  font-size: 20px;
+  background-color: #205372;
+  color: #ececec;
+}
+
+.col {
+  padding-right: 5px;
+  padding-left: 5px;
+  padding-bottom: 10px;
+}
+
+.bill {
+  background-color: #EDF0F7;
+  border-radius: 25px;
+  padding: 10px;
+  display: inline-block;
+  min-height: 400px;
+}
+
+.bill .title {
+  font-family: 'Questrial';
+  width: 100%;
+  padding: 0px 5px 5px 2px;
+  display: inline-block;
+  font-size: 20px;
+}
+
+.bill .title > .number {
+  float: left;
+  font-family: 'Lora';
+  color: #3c3c3c;
+  margin-right: 5px;
+}
+
+.bill .title > .text {
+  padding-left: 74px;
+  position: relative;
+  top: 1px;
+}
+
+.bill .description, .bernie {
+  vertical-align: top;
+  display: inline-block;
+  font-size: 14px;
+  font-family: 'Libre Baskerville';
+  width: 100%;
+}
+
+.bill .description p {
+  text-indent: 30px;
+}
+
+.bill  .committee {
+  font-family: 'Lora';
+  display: inline-block;
+}
+
+.bill  .committee > .head {
+  padding: 5px;
+  font-size: 18px;
+}
+
+.bill  .committee .heading {
+  font-size: 14px;
+  font-family: 'Lora';
+  color: #acacac;
+}
+
+.bernie.well {
+  margin-bottom: 4px;
+}
+
+.bernie.heading {
+  font-size: 14px;
+  font-family: 'Lora';
+  color: #acacac;
+  padding-right: 10px;
+  margin-top: 2px;
+  margin-bottom: 12px;
+  text-align: right;
+}
+
+.bill  .committee > .name {
+  padding: 5px;
+  font-size: 18px;
+}
+
+.bill  .committee > .name > .val > .icon {
+  position: relative;
+  top: 2px;
+  padding-right: 2px;
+}
+
+.bill  .committee > .members {
+  padding: 5px;
+  font-size: 14px;
+  padding-bottom: 15px;
+}
+
+.bill-description {
+  padding-right: 0px;
+  padding-top: 10px;
+}
+
+.no-left-gutter {
+  padding-left: 0px;
+}
+
+.small-left-gutter {
+  padding-left: 10px;
+}
+
+.bill  .committee > .members > div.member > div.dropdown > div.dropdown-toggle {
+  padding-bottom: 2px;
+}
+
+.bill  .committee > .members > .title {
+  margin-top: 10px;
+}
+
+.chair-affiliation {
+  display: inline-block;
+  float: right;
+  margin-right: 5px;
+}
+
+.member-affiliation {
+  display: inline-block;
+  float: right;
+  margin-right: 5px;
+}
+
+.dropdown {
+  cursor: pointer;
+  display: inline-block;
+}
+
+.dropdown:hover {
+  color: #205372;
+}
+
+.D {
+  display: inline-block;
+  color: #317BBF;
+}
+
+.R {
+  display: inline-block;
+  color: #E9514F;
+}
+
+.dropdown-menu {
+  text-align: center;
+  min-width: 100px;
+  padding: 5px;
+}
+
+.dropdown-menu .btn {
+  font-family: 'Questrial';
+}
+
+.btn-xs {
+  padding-bottom: 5px;
+}
+
+.btn-sm {
+  padding-bottom: 7px;
+}
+
+.action > .btn {
+  margin-right: 2px;
+  margin-left: 2px;
+  margin-bottom: 2px;
+}
+
+li > div.btn {
+  margin-right: 2px;
+}
+
+.caret {
+  margin-right: 2px;
+}
+
+.val {
+  display: inline-block;
+}
+
+.footer {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.disclaimer {
+  width: 500px;
+  margin: 0 auto;
+  padding-top: 10px;
+  font-family: 'Questrial';
+}
+
+.github {
+  padding-left: 50px;
+  padding-top: 15px;
+}
+
+.copyright {
+  padding-top: 15px;
+  font-family: 'Architects Daughter';
+  font-size: 22px;
+  color: #3c4c7c;
+}
+
+.no-summary {
+  color: #9c9c9c;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-family: 'handlee';
+}
+
+.alert {
+  border-radius: 15px;
+  margin-bottom: 10px;
+  margin-top: 15px;
+}
+
+.alert > .icon {
+  position: relative;
+  top: 3px;
+  font-size: 2em;
+  float: left;
+}
+
+.alert > .text {
+  position: relative;
+  left: 20px;
+  padding-right: 25px;
+  font-size: 18px;
+  font-family: 'Questrial';
+}
+
+.read-more, .collapse-description {
+  font-size: 12px;
+  position: relative;
+  top: 10px;
+  float: right;
+}
+
+.full-text {
+  position: relative;
+  top: -13px;
+  left: 10px;
+  font-size: 16px;
+  font-family: 'Questrial';
+}
+
+.full-text > a > i {
+  margin-left: 4px;
+}
+
+.toast-message {
+  font-family: 'Architects Daughter';
+  text-align: center;
+}
+
+.toast-message > .btn {
+  width: 160px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 2px;
+}
+
+.modal-footer > .btn {
+  letter-spacing: 1px;
+  text-transform: none;
+}
+
+#callModalButtonContainer {
+  margin-top: 15px;
+  text-align: center;
+}
+
+#callModalButtonContainer > .btn {
+  letter-spacing: 1px;
+  text-transform: none;
+}
+
+#callModalButtonContainer > .btn > i {
+  margin-left: 5px;
+}
+
+.toggle-members {
+  padding-right: 5px;
+  padding-bottom: 15px;
+}
+
+.bernie.heading.signature {
+  color: #9c9c9c;
+}
