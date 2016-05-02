@@ -1,0 +1,94 @@
+<HTML>
+   <HEAD>
+      <link rel="icon" type="image/png" href="img/favicon.png" />
+      <TITLE>Bernie's Bills - Citizens helping citizens lobby for a better government.</TITLE>
+      <script src="js/jquery-2.2.1.min.js"></script>
+      <script src="js/jquery-ui.min.js"></script>
+      <script src="js/min.js"></script>
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+      <link rel="stylesheet" href="css/bootstrap-xl.css">
+      <script src="js/bootstrap.min.js"></script>
+      <link rel="stylesheet" type="text/css" href="css/style.min.css">
+      <link href='https://fonts.googleapis.com/css?family=Libre+Baskerville|Lora|Architects+Daughter|Questrial|Handlee' rel='stylesheet' type='text/css'>
+   </HEAD>
+  <BODY>
+    <div class="heading">
+      <div class="title"><img src="img/logo.png"></div>
+      <div class="description">Citizens helping citizens lobby for a better government.</div>
+    </div>
+    <div class="container-fluid">
+      <div class="alert alert-info"><div class="icon"><i class="glyphicon glyphicon-info-sign"></i></div><div class="text"> Senator Bernie Sanders has introduced the following bills to the floor of the U.S. Senate.  Exercise your constitutional rights by lobbying your government in support of Bernie's policies.</div></div>
+      <div id="bills">
+    </div>
+    </div>
+    <div class="footer">
+      <div class="disclaimer">Bernie's Bills was made with &hearts; by <a href="https://github.com/brobits/berniesbills/graphs/contributors">everyday volunteers</a>, no billionaires involved.
+      <div>This website does not have any official relation to Senator Bernie Sanders.</div></div>
+      <div class="github">
+        <iframe src="https://ghbtns.com/github-btn.html?user=brobits&repo=berniesbills&type=fork&count=false&size=large" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>
+      </div>
+      <div class="copyright">
+      &copy; 2016 BerniesBills.org
+      </div>
+    </div>
+    <!-- Modal Call -->
+    <div class="modal fade" id="modalCall" tabindex="-1" role="dialog" aria-labelledby="modalCall">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="callModalTitle"></h4>
+          </div>
+          <div class="modal-body">
+            <div id="callModalText"></div>
+            <div id="callModalButtonContainer"><div id="callModalButton" class="btn btn-lg btn-success">Call now <i class="glyphicon glyphicon-earphone"></i></div></div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Email -->
+    <div class="modal fade" id="modalEmail" tabindex="-1" role="dialog" aria-labelledby="modalCall">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="emailModalTitle">Email a senator</h4>
+          </div>
+          <div class="modal-body" id="emailModalText">
+            
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-success" id="emailModalButton">E-mail now <i class="glyphicon glyphicon-share-alt"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Write -->
+    <div class="modal fade" id="modalWrite" tabindex="-1" role="dialog" aria-labelledby="modalCall">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="writeModalTitle">Write a senator</h4>
+          </div>
+          <div class="modal-body" id="writeModalText">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <iframe id="callframe" width="0" height="0"></iframe>
+  </BODY>
+    <script>
+      $( document ).ready(function() {
+        fetch();
+      });
+    </script>
+</HTML>

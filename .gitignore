@@ -1,0 +1,6 @@
+js/bundle.js
+js/min.js
+node_modules/
+*.DS_Store
+data/bills.json
+css/style.min.css

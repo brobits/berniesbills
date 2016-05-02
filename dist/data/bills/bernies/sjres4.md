@@ -1,0 +1,1 @@
+"In the year 2016, with a political campaign finance system that is corrupt and increasingly controlled by billionaires and special interests, I fear very much that, in fact, government of the people, by the people, and for the people is beginning to perish in the United States of America." - Senator Bernie Sanders
